@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "../components/Header/Header";
+import Heading from "../components/Heading/Heading";
 import ClickableImageCarousel from "../components/ClickableImageCarousel/ClickableImageCarousel";
 import ArticleImageOverlay from "../components/ArticleImageOverlay/ArticleImageOverlay";
 import ArticleGroup from "../components/ArticleGroup/ArticleGroup";
@@ -8,7 +8,7 @@ import ArticleGroup from "../components/ArticleGroup/ArticleGroup";
 function Home(props) {
   return (
     <>
-      <Header />
+      <Heading />
       <div className="flex-column-row flex-center mw-base height-500-m-d">
         <div className="mw-850 mr-10-dx">
           <ClickableImageCarousel topic="automobiles" />
