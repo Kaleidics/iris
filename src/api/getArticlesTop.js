@@ -1,5 +1,7 @@
+import { API_BASE_URL } from "../config";
+
 const getArticlesTop = async (topic, setter) => {
-  const url = process.env.REACT_APP_API_URL + "/api/top-articles/" + topic;
+  const url = API_BASE_URL + "/api/top-articles/" + topic;
   const response = await fetch(url);
   const articles = await response.json();
 

@@ -1,5 +1,7 @@
+import { API_BASE_URL } from "../config";
+
 const getArticlesPopular = async (setter) => {
-  const url = process.env.REACT_APP_API_URL + "/api/most-popular/";
+  const url = API_BASE_URL + "/api/most-popular/";
   const response = await fetch(url);
   const articles = await response.json();
 
