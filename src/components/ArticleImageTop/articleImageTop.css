@@ -1,7 +1,6 @@
 .article-image-top-container {
   width: 100%;
   max-width: 400px;
-  height: 455px;
   margin: 10px 0;
   box-shadow: -8px -4px 12px -1px rgb(71 71 71 / 10%);
 }
@@ -20,10 +19,11 @@
 }
 
 .article-image-top-text-container {
-  position: absolute;
-  bottom: -184px;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   padding: 20px 15px;
+  min-height: 210px;
 }
 
 .article-image-top-title {
@@ -45,6 +45,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
+  margin-top: auto;
 }
 
 .article-image-top-section {

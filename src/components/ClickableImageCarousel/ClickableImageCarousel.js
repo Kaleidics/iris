@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Moment from "react-moment";
-
-import getArticlesTop from "../../api/getArticlesTop";
 
 import "./clickableImageCarousel.css";
 
-function ClickableImageCarousel({ topic }) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getArticlesTop(topic, setData);
-  }, []);
-
-  console.log(data);
-
-  if (!data[0]) {
-    return <> </>;
-  }
-
-  const { multimedia, published_date, section, title } = data[0];
+function ClickableImageCarousel({ article, height, summary }) {
+  const { abstract, multimedia, published_date, section, title } = article;
   return (
-    <div className="clickableImageCarousel">
+    <div className="clickableImageCarousel" style={{ height: height }}>
       <article
         className="carousel-slide"
         style={{
@@ -32,6 +18,7 @@ function ClickableImageCarousel({ topic }) {
       >
         <div className="carousel-text-container">
           <h2 className="carousel-title">{title}</h2>
+          {summary && <p className="carousel-abstract">{abstract}</p>}
           <p className="carousel-subsection">
             <span className="subsection-spacing">{section}</span>
             <span className="subsection-spacing">/</span>

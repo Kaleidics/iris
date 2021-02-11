@@ -11,6 +11,7 @@
 }
 
 html {
+  width: 100%;
   font-size: 62.5%;
 }
 
@@ -25,6 +26,12 @@ body {
 }
 
 .flex-column-row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.flex-column {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -109,8 +116,16 @@ body {
     margin-bottom: 10px;
   }
 
+  .pt-40-dx {
+    padding-top: 40px;
+  }
+
   .ptb-40-dx {
     padding: 40px 0;
+  }
+
+  .mt-80-dx {
+    margin-top: 80px;
   }
 
   .mtb-80-dx {
@@ -129,4 +144,37 @@ body {
 
 .bg-light {
   background-color: #f7f7f7;
+}
+
+.slick-initialized {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1280px) {
+  .slick-center {
+    transform: scale(1.1);
+    margin: 0 45px;
+  }
+
+  .slick-list {
+    padding: 45px 60px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .slick-center {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .slick-center {
+    margin: 0 60px;
+  }
+}
+
+@media screen and (min-width: 2900px) {
+  .slick-center {
+    margin: 0 65px;
+  }
 }

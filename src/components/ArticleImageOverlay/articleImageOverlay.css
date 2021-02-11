@@ -35,13 +35,30 @@
   max-width: 40rem;
 }
 
+.article-abstract {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Nunito";
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 1280px) {
+  .article-abstract {
+    overflow: unset;
+    white-space: normal;
+  }
+}
+
 .article-subsection {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Nunito";
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .article-spacing {

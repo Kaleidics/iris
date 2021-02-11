@@ -10,7 +10,7 @@ const getArticlesPopular = async (setter) => {
     (article) => article.media && article.media.length > 0
   );
 
-  setter(articles);
+  setter(curatedArticles);
 };
 
 export default getArticlesPopular;

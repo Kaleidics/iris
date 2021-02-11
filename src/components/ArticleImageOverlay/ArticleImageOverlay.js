@@ -5,22 +5,10 @@ import getArticlesTop from "../../api/getArticlesTop";
 
 import "./articleImageOverlay.css";
 
-function ArticleImageOverlay({ topic }) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getArticlesTop(topic, setData);
-  }, []);
-
-  console.log(data);
-
-  if (!data[0]) {
-    return <> </>;
-  }
-
-  const { multimedia, published_date, section, title } = data[0];
+function ArticleImageOverlay({ article, height, summary }) {
+  const { abstract, multimedia, published_date, section, title } = article;
   return (
-    <div className="article-container">
+    <div className="article-container" style={{ height: height }}>
       <article
         className="article"
         style={{
@@ -32,6 +20,7 @@ function ArticleImageOverlay({ topic }) {
       >
         <div className="article-text-container">
           <h2 className="article-title">{title}</h2>
+          {summary && <p className="article-abstract">{abstract}</p>}
           <p className="article-subsection">
             <span className="article-spacing">{section}</span>
             <span className="article-spacing">/</span>
